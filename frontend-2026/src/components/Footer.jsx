@@ -1,12 +1,12 @@
 export default function Footer(){
 
-    return <Footer
+    return <footer
     style={{
-        
+        backgroundColor: 'red',
     }}
     >
-
-    </Footer>
+Footer
+    </footer>
      
 
 }

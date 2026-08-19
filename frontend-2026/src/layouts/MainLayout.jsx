@@ -1,4 +1,4 @@
-import Header from "../components/Headers"
+import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Menu from "../components/Menu"
 
@@ -7,15 +7,31 @@ export default function Mainlayout() {
 return  <div
 
 style={{
-    minHeigth: "100vh"
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: 'column',
+
 }}
  >
     <Header />
     
-    <div className= "body">
+    <div className= "body"
+    style={{
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'row',
+
+    }}
+    >
        <Menu />
 
-    <main>
+    <main
+    style={{
+        backgroundColor: 'blue',
+        flex: 1,
+        
+    }}
+    >
         Content goes here
     </main>
     </div>
