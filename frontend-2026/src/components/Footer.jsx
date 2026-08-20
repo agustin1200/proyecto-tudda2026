@@ -5,7 +5,8 @@ export default function Footer(){
         backgroundColor: 'red',
     }}
     >
-Footer
+
+Sistema desarrollado por Ing. Agustin Clavero
     </footer>
      
 

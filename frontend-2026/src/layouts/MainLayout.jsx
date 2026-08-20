@@ -2,7 +2,9 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Menu from "../components/Menu"
 
-export default function Mainlayout() {
+export default function Mainlayout ({
+    children,
+}) {
 
 return  <div
 
@@ -26,13 +28,14 @@ style={{
        <Menu />
 
     <main
+
     style={{
         backgroundColor: 'blue',
         flex: 1,
         
     }}
     >
-        Content goes here
+        {children}
     </main>
     </div>
 

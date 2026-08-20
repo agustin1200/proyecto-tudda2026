@@ -1,7 +1,13 @@
-import './App.css'
-import Mainlayout from './layouts/MainLayout'
+import './App.css';
+import {RouterProvider, createBrowserRouter} from 'react-router-dom'
+import routes from './routes'
 
 export default function App() {
-  return <Mainlayout />;
-  }
+  const router = createBrowserRouter(routes);
+
+return <RouterProvider
+  router={router}
+/>;
+  
+}
 
