@@ -8,9 +8,9 @@ export default function Menu() {
 >
 
 <Link to= "/">Inicio</Link>
+<Link to= "/login">Login</Link>
 <Link to= "/about">About</Link>
 <Link to= "/otra">otra</Link>
-<Link to= "/login">Login</Link>
 
 </nav>;
 
