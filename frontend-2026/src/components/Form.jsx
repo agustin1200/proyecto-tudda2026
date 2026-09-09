@@ -1,8 +1,24 @@
-export default function Form({ children }) {
-    return (
-        <form>
+export default function Form({ 
+    title,
+    children,
+    onSubmit,
+    sumbitLabel = 'Enviar',
+    onCancel,
+    cancelLabel = 'Cancelar'    
+
+}) {
+    return <form onSubmit={onSubmit}
+        >
+
+            {title && <h3>{title}</h3>}
             {children}
-            <input type="submit" value="Enviar" />
+            {onCancel && <input 
+            type="button" 
+            value={cancelLabel} 
+            onClick={onCancel} />}
+
+            <input type="submit" value={sumbitLabel} />
         </form>
-    );
+ 
+        
 }
