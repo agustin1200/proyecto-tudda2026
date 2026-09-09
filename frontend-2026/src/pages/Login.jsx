@@ -32,11 +32,13 @@ return <Form
         label="Nombre de usuario: "
         value={data.username}
         onChange={newValue => setData(data => ({...data, username: newValue}))}
+        required
     />  
     <SecretField
         label="Contraseña: "
         value={data.password}
         onChange={newValue => setData(data => ({...data, password: newValue}))}
+        required
     />
 </Form>;
 

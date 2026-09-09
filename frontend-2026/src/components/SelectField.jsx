@@ -4,7 +4,8 @@ export default function SelectField ({
 label,
 value,
 onChange,
-options = []
+options = [],
+required = false
 }) {
     return  <Field
         label={label}
@@ -13,6 +14,7 @@ options = []
     <select
        value={value}
        onChange={e => onChange(e.target.value)}
+       required={required}
     >
 
         <option disabled>-- Seleccione una opcion --</option>
