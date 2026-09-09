@@ -13,10 +13,15 @@ export default function User() {
         role: 'user'
     });
 
+    function submitHandler(e) {
+        e.preventDefault();
+        console.log(data);
+    }
 
 
     return   <Form
         title="Agregar usuario"
+        onSubmit={submitHandler}
     > 
         <TextField 
         label="Nombre de Usuario:" 
