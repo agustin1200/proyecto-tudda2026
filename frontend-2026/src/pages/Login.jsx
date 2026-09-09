@@ -17,7 +17,8 @@ function handleSubmit(e){
     console.log(data);
 }
 
-function cancelHandler(e){
+
+function cancelHandler(){
     navigate('/');
 }
 
