@@ -30,7 +30,7 @@ style={{
     <main
 
     style={{
-        backgroundColor: 'blue',
+        backgroundColor: 'green',
         flex: 1,
         
     }}

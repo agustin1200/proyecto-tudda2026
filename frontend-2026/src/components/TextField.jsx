@@ -5,7 +5,7 @@ export default function TextField({
     value,
     onChange    
 }) {
-    return  <Field label="Nombre de usuario: ">
+    return  <Field label={label}>
     
         <input 
         type="text" 

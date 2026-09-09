@@ -1,17 +1,18 @@
-import {Link} from 'react-router-dom';
+import MenuItem from "./MenuItem";
 
-export default function Menu() {
-    return <nav
+export default function Menu ({
+    visible = true 
+}) {
+  return <nav
     style={{
-        backgroundColor: 'lightblue',
+        display: visible ? 'block' : 'none',
+        backgroundColor: "lightblue",
     }}
->
+  >
+    <MenuItem to="/">Inicio</MenuItem>
+    <MenuItem to="/login">Login</MenuItem>
+    <MenuItem to="/about">Acerca de</MenuItem>
+    <MenuItem to="/user">Agregar usuario</MenuItem>
 
-<Link to= "/">Inicio</Link>
-<Link to= "/login">Login</Link>
-<Link to= "/about">About</Link>
-<Link to= "/otra">otra</Link>
-
-</nav>;
-
+  </nav>;
 }
