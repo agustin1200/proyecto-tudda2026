@@ -15,9 +15,14 @@ export default function User() {
 
     function submitHandler(e) {
         e.preventDefault();
+
+        if (!data.email.incloudes('@')) {
+            alert('El correo electronico no es valido');
+            return;
+        }
+
         console.log(data);
     }
-
 
     return   <Form
         title="Agregar usuario"
