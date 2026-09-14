@@ -1,0 +1,18 @@
+### GET /
+@authorizationToken = 0419fa727b223478f0f22a5cb1af0eade10e6e194fdb1d66d150a615c84dda38
+GET http://localhost:3000/api/users
+Authorization: Bearer {{authorizationToken}}
+
+### POST /
+POST http://localhost:3000/users
+Content-Type: application/json
+
+
+
+{
+  "username": "agustin",
+  "password": "una-clave-segura",
+  "displayName": "Agustín",
+  "email": "agustin@example.com",
+  "roles": ["user"]
+}

@@ -1,0 +1,40 @@
+@authorizationToken = f0b9c918aafc97ad149191a68a923a88057f78bcd56f5ae77ac98a26394a1851
+
+### Crear un producto
+POST http://localhost:3000/api/products
+Content-Type: application/json
+Authorization: Bearer {{authorizationToken}}
+
+{
+  "name": "Alimento para gato 15 kg",
+  "category": "Alimentos",
+  "price": 23000,
+  "stock": 12,
+  "minimumStock": 3
+}
+
+### Ver todos los productos
+GET http://localhost:3000/api/products
+Authorization: Bearer {{authorizationToken}}
+
+### Sumar 5 unidades al stock
+PATCH http://localhost:3000/api/products/6a85d5306fe258ad3dc76f22/stock
+Content-Type: application/json
+Authorization: Bearer {{authorizationToken}}
+
+{
+  "quantity": 5
+}
+
+### Restar 2 unidades del stock
+PATCH http://localhost:3000/api/products/6a85d5306fe258ad3dc76f22/stock
+Content-Type: application/json
+Authorization: Bearer {{authorizationToken}}
+
+{
+  "quantity": -2
+}
+
+### Ver productos con poco stock
+GET http://localhost:3000/api/products/low-stock
+Authorization: Bearer {{authorizationToken}}
