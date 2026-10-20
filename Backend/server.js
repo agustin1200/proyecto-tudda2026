@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import config from './config.js';
 import { configureRouter } from './api/router.js';
 import './dependencies.js';
@@ -15,6 +16,7 @@ try {
   const app = express();
 
   app.use(express.json());
+  app.use(cors());
   app.use(logMiddleware);
   app.use(checkAuthorizationTokenMiddleware);
 
